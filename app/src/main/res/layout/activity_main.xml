@@ -3,47 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
 
-
-        <EditText
-            android:id="@+id/numberEditText"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:hint="@string/enter_the_number_phone"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:padding="7dp"
-            tools:ignore="MissingConstraints" />
-
-
-        <EditText
-            android:id="@+id/messageEditText"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_below="@+id/numberEditText"
-            android:autofillHints=""
-            android:hint="@string/enter_your_message_here"
-            android:inputType="textAutoCorrect"
-            android:padding="7dp" />
-
-        <Button
-            android:id="@+id/sendMessagebtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/messageEditText"
-            android:layout_centerHorizontal="true"
-            android:background="@color/teal_700"
-            android:text="@string/send" />
-
-        
-    </RelativeLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
