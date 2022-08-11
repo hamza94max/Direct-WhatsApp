@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.hamza.whatsapp.ui.Fragments.HomeFragment"
+        android:name="com.tech.whatsapp.ui.Fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

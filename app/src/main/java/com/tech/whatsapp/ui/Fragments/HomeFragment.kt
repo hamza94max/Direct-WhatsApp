@@ -1,4 +1,4 @@
-package com.hamza.whatsapp.ui.Fragments
+package com.tech.whatsapp.ui.Fragments
 
 import android.content.Intent
 import android.net.Uri
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.hamza.whatsapp.databinding.FragmentHomeBinding
+import com.tech.whatsapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
@@ -33,7 +33,8 @@ class HomeFragment : Fragment() {
             val message = binding.messageEditText.text.toString()
 
             if (number.trim().length < 8)
-                Toast.makeText(context, "Please, enter correct number", Toast.LENGTH_LONG).show()
+                binding.numberEditText.error = "Please, enter correct number"
+            else if (isMessageEmpty()) binding.messageEditText.error = "The message is empty!!"
             else sendMessage(number, message)
         }
     }
@@ -41,7 +42,6 @@ class HomeFragment : Fragment() {
     private fun sendMessage(number: String, message: String) {
         val countryCode = binding.countrySelection.selectedCountryCode.toString()
         try {
-
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -51,6 +51,10 @@ class HomeFragment : Fragment() {
         } catch (e: Exception) {
             Toast.makeText(context, "whatsapp app not install", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun isMessageEmpty(): Boolean {
+        return binding.messageEditText.text.isEmpty()
     }
 
 

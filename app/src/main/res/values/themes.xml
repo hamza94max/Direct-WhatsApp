@@ -1,5 +1,11 @@
 <resources>
     <!-- Base application theme. -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.WhatsApp</item>
+    </style>
+
+
     <style name="Theme.WhatsApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
 
 

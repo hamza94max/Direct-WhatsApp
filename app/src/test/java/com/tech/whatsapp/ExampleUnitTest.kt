@@ -1,4 +1,4 @@
-package com.hamza.whatsapp
+package com.tech.whatsapp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
