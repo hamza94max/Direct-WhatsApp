@@ -3,9 +3,17 @@ An application takes the numberPhone from user and go to whatsApp chat directly 
 
 ## ScreenShots
 
-<p float = "left">
-<img src = "https://user-images.githubusercontent.com/54688005/184131198-985aed74-a092-4b9a-98e3-9162ea88e628.png" width = "35%">
-<p/>
+
+<div>
+
+<img src = "https://user-images.githubusercontent.com/54688005/199278494-1ce8891b-7c33-4c71-931b-91b7a61523ec.png" width = 35%>
+  <img width ="5%"/> 
+<img src = "https://user-images.githubusercontent.com/54688005/199278516-7c811e44-2473-46b2-a05d-4f9390535507.png" width = 35%>
+</div>
+
+
+</div>
+
 
 
 ## memory Leaks 
